@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Array Cardio 💪</title>
+  <title>Array Cardio </title>
 </head>
 <body>
   <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
@@ -51,30 +51,39 @@
       return total + (inventor.passed - inventor.year);
     }, 0);
     console.log(totalYears);
-    // 5. Sort the inventors by years lived
+
+    
+    // 5.
+    //Skilar lista röðuðum eftir aldri
     const oldest = inventors.sort(function(a, b) {
       const lastInventor = a.passed - a.year;
       const nextInventor = b.passed - b.year;
       return lastInventor > nextInventor ? -1 : 1;
     });
     console.table(oldest);
-    // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
+
+
+    // 6.
+    //Fer í gegnum links listann og skilar lista af textContent í listanum sem hefur "de"
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
     // const category = document.querySelector('.mw-category');
     // const links = Array.from(category.querySelectorAll('a'));
-    // const de = links
-    //             .map(link => link.textContent)
-    //             .filter(streetName => streetName.includes('de'));
-    // 7. sort Exercise
-    // Sort the people alphabetically by last name
+    // const de = links.map(link => link.textContent).filter(streetName => streetName.includes('de'));
+    
+    
+    // 7.
+    //Skilar lista röðuðum eftir stafrófsröð með eftirnafni
     const alpha = people.sort((lastOne, nextOne) => {
       const [aLast, aFirst] = lastOne.split(', ');
       const [bLast, bFirst] = nextOne.split(', ');
       return aLast > bLast ? 1 : -1;
     });
     console.log(alpha);
-    // 8. Reduce Exercise
+
+
+    // 8.
     // Sum up the instances of each of these
+    //Telur hversu oft hvert farartæki kemur fram í listanum og gerir object sem heldur utan um þær tölur
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck', 'pogostick'];
     const transportation = data.reduce(function(obj, item) {
       if (!obj[item]) {
