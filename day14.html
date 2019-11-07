@@ -34,9 +34,9 @@
     //Til að copy-a objecta er hægt að gera þetta:
     const cap2 = Object.assign({}, person, { number: 99, age: 12 });
     console.log(cap2);
-    // We will hopefully soon see the object ...spread
-    // const cap3 = {...person}; <-- þetta virkar
-    // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
+
+    //Það virkar núna að gera const cap3 = {...person}; Virkaði ekki þegar Javascript30 var gert. Þetta er samt merkt sem experimental
+
     const wes = {
       name: 'Wes',
       age: 100,
@@ -48,6 +48,8 @@
     console.clear();
     console.log(wes);
     const dev = Object.assign({}, wes);
+
+    //Þetta breytir wes objectinu í JSON string og parse breytir stringinu svo í object. Ekki besta leiðin til að copy-a object..
     const dev2 = JSON.parse(JSON.stringify(wes));
   </script>
 
