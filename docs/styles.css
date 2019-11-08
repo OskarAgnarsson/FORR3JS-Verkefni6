@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 45em;
+    margin: 1em auto;
+    background-color:rgb(50,50,50);
+}
+
+#container {
+    display: grid;
+    grid-template-areas: 1fr 1fr 5fr;
+    margin: 3em auto;
+    background-color: rgb(75,75,75);
+    padding: 2em;
+    border-radius: 3em;
+}
+
+#range {
+    margin: 0 auto;
+    margin-top: 1em;
+}
+
+#min,#max {
+    max-width: 5em;
+}
+
+#min {
+    margin-right: 12em;
+}
+
+#max {
+    margin-left: 12em;
+}
+
+#slider {
+    max-width: 30em;
+    margin: 0 auto;
+}
+
+table {
+    max-width: 30em;
+    margin: 0 auto;
+    margin-top: 3em;
+    text-align: center;
+}
+
+thead {
+    background-color: rgb(190,190,190);
+}
+
+th {
+    padding: 1em;
+    width: 15em;
+    border-radius: 1em;
+}
+
+td {
+    padding: 0.5em;
+    background-color: rgb(220,220,220);
+    border-radius: 0.7em;
+}
